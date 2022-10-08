@@ -1,0 +1,39 @@
+GIT Process
+-------------
+> Create new repository
+> Provide valid name
+> Select Public repository
+> Finish
+
+Go to ypur folder(e.g. machine learning)
+type cmd in address bar then enter
+
+GIT Commands.  
+--------------
+git init                 # Initialise the GIT folder
+git add .                # Add all files/folder in GIT folder
+git config user.name "Your name"
+git config user.email "youremail@id.com"     # of git account     
+git remote add origin "yourrepolink.git"     # tell that our code should be in this repository
+
+
+git commit -m "anymessage"
+git push -u origin main
+
+
+
+
+
+? - keyboard shortcut
+
+git.io - URL shortner(like bitly.)
+BLAME - we can check any changes that performed to our code
+
+
+
+
+
+
+
+
+

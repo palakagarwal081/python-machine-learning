@@ -1,0 +1,781 @@
+DAY 1: 14 SEP
+--------------
+
+id() is a function used for find the location of variable
+--------------------------------------------------------------
+
+RUles of variables
+---------------------
+1. can,t start with number and can be used after alphabets 
+ex. 1='python' this is wrong
+    a1='python'
+
+2. no space
+a 1='python'
+
+3. can,t use any special character
+a$='hello'
+
+4. but underscore can be use
+a_1='hello'
+
+5. can,t use keyword
+for=2.12
+
+------------------------------------------------
+
+# as prefix and ''' and """ is used in prefix and suffix for comment
+
+triple quotes used for multi line comments
+
+------------------------------------------------
+
+Python Operators:
+-------------------
+
+7 types:-
+
+1. Arithmatic            +,*,/,-,%,**(exponent),//(floor division)
+
+2. Comparison/Relational >,<,>=,<=,!=,==
+
+3. Assignment            =,+=,-=,*=,/=,//=
+
+4. Bitwise               &,|,^
+
+5. Logical               and,or,not
+
+6. Identity              is , is not
+
+7. Membership            in, not in
+
+-------------------------------------------------------------
+
+( ) -> parenthesis -> used for Function, Expression, Tuple 
+[ ] -> square bracket -> List, Indexing, Slicing
+{ } -> curly bracket -> Set, Dictionary
+< > -> angular bracket -> No Use
+
+------------------------------------------------------------
+ 
+Data Classes and Built-in Functions
+ 
+Data Types in Python:
+5 Types:-
+1. NUmeric - int --- a=5
+            float --- b=5.5
+            complex = 3+5j
+
+2. String - str --- a='Hello'/a="Hello"/a='''Hello'''
+                    b="'Hello"' (not possible)
+
+3. List - list --- my_list = ['abc',5,5.5,2+6j]
+
+4. Tuple - tuple --- my_tuple = (45,4.5,'hii','bye')
+ 
+5. Set - set --- {1,23,56,50}
+
+6. Dictionary --- dict - {key:value}
+
+7. Boolean --- True,False
+
+-------------------------------------------------------------------------
+
+DAY-2: 15 sep
+--------------
+
+1. STRING:  It is immutable.
+-----------
+
+
+1. Indexing: (positive/negative indexing)
+
+2. Slicing:
+ a = 'Hello'
+ output: He
+ a[starting point(by default 0):stop point(n+1):step(by default 1)]
+          (including)             (excluding)
+
+ ans: a[0:2]
+
+ 
+note: for reversing the entire word we use -1 as step size
+
+--------------------------------------------------------------------------
+
+2.LIST: 
+--------
+
+1. [ ]
+2. homogeneous/heterogeneous data
+3. mutable
+4. indexing/slicing, loop
+
+
+
+
+
+insert(in between)
+extend(multi values)
+append(only one value)
+
+
+
+--------------------------------------------------------
+
+3.TUPLE:
+---------
+
+1. ( )
+2. immutable
+3. comma separated value
+4. homo/hetero
+5. indexing/slicing
+6. fast as compared to list
+
+--------------------------------------------------------
+
+HOME TASK:
+-----------
+
+How to insert another element in a tuple t ?
+
+--------------------------------------------------------
+
+4. SET:
+--------
+
+1. { }
+2. unordered
+3. indexing/slicing (no use)
+4. unique collection
+5. mutable
+
+--------------------------------------------------------
+ 
+DAY 3: 16 sep
+--------------
+
+5.DICTIONARY:
+--------------
+
+1. unordered
+2. indexing/slicing(not possible)
+3. key value pair
+4. 
+--------------------------------------------------------
+
+Home Task:
+-----------
+
+How to rename key in dictionary?
+
+------------------------------------------------------
+
+STATEMENTS: 3 TYPES
+--------------------
+
+1. Condition/Decision Making :
+     if , elif , else(Suites/Indentation)
+
+2. Looping :
+     For and While
+
+3. Exception Handling :
+     try , Except
+------------------------------------------------------
+ 
+SIMPLE if
+----------
+if age < 18:
+   print('a gift')
+if age >= 18 and age <= 20:
+   print('a gift')
+   print('a task')
+if age > 20:
+   print('Koi gift nahi hai')
+----------------------------------------------
+
+LADDER
+--------
+if age<18:
+   print('a gift')
+
+elif age>=18 and age <= 20:
+   print('a gift')
+   print('a task')
+
+else:
+   print('koi gift nahi hai')
+
+------------------------------------------------
+
+NESTED
+-------
+if today=='Saturday':
+   print('Half day work')
+
+elif today=='Sunday':
+   if condition=='sick':
+       print('stay at home')
+   else:
+       print('party')
+
+-----------------------------------------------------------------------------
+
+range(starting point(including),stop point(excluding),step(by default 1)))
+        (by default 0)
+
+
+----------------------------------------------------------------------------
+
+DAY 4: 17 sep
+--------------
+ 
+LOOPING: 2 types
+
+1. FOR LOOP:
+------------
+
+for i in [1,2,3,4,5]:
+     print(i) 
+
+--------------------------------------------------
+HOME TASK
+----------
+multiply first four element of list by 2
+t=[2,5,8,6,8,10,16] ? 
+
+-----------------------------------------------------
+
+2. WHILE LOOP:
+---------------
+
+
+
+-------------------------------------------------------
+
+FUNCTIONS: 4 types
+--------------------
+
+USER DEFINED FUNCTION:
+----------------------
+
+1. NO i/p NO o/p
+2. NO i/p BUT o/p
+3. i/p BUT NO o/p
+4. i/p AND o/p
+
+------------------------------------------
+
+1. Taking multiple i/p.
+2. Returning Multiple o/p
+3. Keyword Argument
+4. Default Values
+5. *args
+6. **kwargs
+
+-------------------------------------------
+
+f-string/string format kaha use karte h or kab use karte h?
+how to print pattern of numbers and alphabets?
+
+------------------------------------------------------------
+
+DAY 5: 19 SEP
+--------------
+
+lambda function: 
+-----------------
+
+it is anonymous function
+it is one line function
+
+-------------------------------------------------------------
+
+MODULE--- it is a .py file
+e.g- OS,Math,Calendar,Daytime,Random
+
+PACKAGES--- it is collection of modules
+e.g- _init_.py
+
+LIBRARIES--- it is a collection of packages
+
+--------------------------------------------------------------
+
+DAY 6: 20 SEP
+--------------
+NUMPY -- Numeric Python
+it is used to solve any mathematical problems 
+and for solving numeric calculations 
+
+--------------------------------------------------------------
+DAY 7: 21 SEP
+--------------
+
+PANDAS -- use for data manipulation and  data analysis
+
+-----------------------------------------------------------
+
+DAY 8: 22 SEP
+--------------
+DATAFRAME:a data type
+ it is a 2d array and return in tabular form
+
+--------------------------------------------------------------
+
+DAY 9: 23 SEP
+--------------
+
+Q1. Find the longest movie name?
+Q2. Find the number of movies who got ten star rating?
+Q3. How many industries are there?
+Q4. Find the least liked comedy movie name?
+Q5. Find the longest english movie?
+Q6. What is the genre of intersteller?
+Q7. What is the average duration of each genre?
+Q8. What is the average rating of each industry?
+Q9. Average rating of romantic movies industrywise?
+Q10. List down all the english movies with their respective 
+     ratings in descending order?
+
+----------------------------------------------------------------------
+
+DAY 10:27 SEP
+--------------
+1. capitalise(first letter capital)
+2. casefold(same as lower)
+3. cat (concatenation)
+4. center()
+5. count(count the no.of characters)
+6. endswith(particular letter se end hona)
+7. find(find the position of the data)
+8. get(give the character or data by index)
+*9. get_dummies(categorical information like gender)(convert string into numerical values))
+10. index(similar to find)
+11. join(join each element with something)
+12. lower()
+13. upper()
+14. strip(leading and trailing spaces/characters remove)
+ 
+
+Kaggle.com 
+(make an account on this)it is exclusively for data science only
+
+Github.com
+(make an account on this)
+
+
+
+machine learning is all about data
+
+------------------------------------------------------------------------------
+DAY 11:28 SEP
+-------------
+
+
+
+--------------------------------------------------------------------------
+DAY 12:6 OCT
+-------------
+in any data we first identify
+String----categorical (yes or no)
+Numerical-----quantifiy ,categorical,random
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
