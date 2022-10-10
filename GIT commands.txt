@@ -20,7 +20,7 @@ git remote add origin "yourrepolink.git"     # tell that our code should be in t
 git commit -m "anymessage"
 git push -u origin main
 
-
+vidgits are the graohical representaion in gui development
 
 
 

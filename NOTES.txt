@@ -382,7 +382,17 @@ in any data we first identify
 String----categorical (yes or no)
 Numerical-----quantifiy ,categorical,random
 
+------------------------------------------------
 
+DAY 15:10 OCT
+--------------
+Four Attributes of Function in Python:
+--------------------------------------
+
+a function can be taken as input argument in another function
+a function can be assigned to an identifier
+a function can be defined inside in another python function 
+a function can be written from another function
 
 
 
