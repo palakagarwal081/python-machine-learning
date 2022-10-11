@@ -382,7 +382,7 @@ in any data we first identify
 String----categorical (yes or no)
 Numerical-----quantifiy ,categorical,random
 
-------------------------------------------------
+------------------------------------------------------------------
 
 DAY 15:10 OCT
 --------------
@@ -394,9 +394,10 @@ a function can be assigned to an identifier
 a function can be defined inside in another python function 
 a function can be written from another function
 
+-----------------------------------------------------------------
 
-
-
+DAY 16:11 OCT
+---------------
 
 
 
