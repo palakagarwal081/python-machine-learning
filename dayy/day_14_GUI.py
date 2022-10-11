@@ -26,7 +26,7 @@ def abc():
 
 ttk.Button(app,text = 'Isko Click Kardo',font = ('Arial',11),command = abc).place(x=100,y=100)
 ttk.Button(app,text = 'Ye wala bhi hai',font = ('Arial',11),command = lambda:msg.set('pata nhi')).place(x=100,y=130)
-
+# command mein ek function de dete h
 
 f1 = ttk.Variable(app)
 f1.set('0')
