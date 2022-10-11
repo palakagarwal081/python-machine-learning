@@ -4,12 +4,11 @@ import warnings
 warnings.filterwarnings('ignore')
 import os
 print('dfghjkldfgh\n\n')
-print(os.getcwd())
-
+print('Location is:',os.getcwd(),'\n\n\n')
 
 app= ttk.Tk()
 app.title('Recoomendation System')
-app.geometry('400x400')
+app.geometry('450x400')
 
 cols = ['user_id','movie_id','rating','timestamp']
 df = pd.read_csv('u.data',sep = '\t', names = cols)
@@ -18,18 +17,52 @@ df1 = pd.read_csv('u.item',sep='|',names = item_cols,encoding="ISO-8859-1")
 movie = pd.merge(df,df1,on='movie_id')
 
 result = ttk.Variable(app)
-box = ttk.Listbox(app,height=10)
-for index,val in movie.iterrows():
-    box.insert(index+1,val['title'])
 
-box.place(x=10,y=10)
+frame = ttk.Frame(app)
+frame.place(x=10,y=10)
+
+box = ttk.Listbox(frame,height=10,width = 50)
+for title in movie['title'].unique():
+    box.insert(ttk.END,title)
+box.pack(side='left',fill='y')   # 'left' can be written as ttk.LEFT and same applicabale for y
+# box.grid(row = 0,column=0)
+# box.place(x=10,y=10)
+
+scroll = ttk.Scrollbar(frame,orient=ttk.VERTICAL)
+scroll.config(command=box.yview)
+box.config(yscrollcommand=scroll.set)
+scroll.pack(side=ttk.RIGHT,fill='y') # y is like complete y axis
+
 
 def get_movie():
-    pass
+    movie_selected = box.get(box.curselection())
+    print(movie_selected)
 
-ttk.Button(app,text = 'Find recoomendation', font = ('Arial',22),\
-    command = get_movie).place(x=200,y=50)
+    movie_pivot = movie.pivot_table(index = 'user_id',columns = 'title',values = 'rating')
+    
+    #Find Similarity with Selected Movie
+    corrs = movie_pivot.corrwith(movie_pivot[movie_selected])
+    corrs_df = pd.DataFrame(corrs,columns = ['Correlation'])
+    corrs_df['rating'] = movie.groupby('title')['rating'].mean()
+    corrs_df['count'] = movie['title'].value_counts()
+    
+    # Find Top 2-3 Recommendations
+    top_recom = list(corrs_df[corrs_df['count']>50].sort_values(by='Correlation',
+                                              ascending=False).head(3).index)
 
-ttk.Label(app,textvariable=result,font = ('Arial',22)).place(x=200,y=100)
+    ## important
+    if movie_selected in top_recom:
+        top_recom.remove(movie_selected)  # remove the name of selected movie itself from recommendation
+    print('Recommendations:',top_recom)
+
+    if top_recom:
+        result.set(top_recom[0])
+    else:                                     # if any have not any recommendation so it shows no recommendation
+        result.set('Sorry No Recommendation Found!!')
+
+ttk.Button(app,text = 'Find recommendation', font = ('Arial',22),\
+    command = get_movie).place(x=10,y=250)
+
+ttk.Label(app,textvariable=result,font = ('Arial',22)).place(x=10,y=300)
 
 app.mainloop()
