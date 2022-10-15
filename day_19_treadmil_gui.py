@@ -18,7 +18,7 @@ graphs.set(values['Pair Plot'])
 y = 10
 for key,value in values.items():
     ttk.Radiobutton(app,text = key,variable = graphs , value = value).place(x = 10 , y = y)
-    y += 20
+    y += 20 
 
 ## Option menu 1 
 col1 = ttk.Variable(app)
