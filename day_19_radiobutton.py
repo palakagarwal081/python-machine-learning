@@ -5,7 +5,7 @@ import tkinter as ttk
 
 app = ttk.Tk()
 app.title('Treadmil Users Analysis')
-app.geometry('600x300')
+app.geometry('600x300') 
 
 rb1 = ttk.Variable(app)
 values = {'Data 1': '1','Data 2': '2'}
