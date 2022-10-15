@@ -52,7 +52,7 @@ box = ttk.Listbox(app, height=5, fg='red',activestyle='dotbox')  # fg for foregr
 box.insert(1,'Sample1')
 box.insert(2,'Sample2')
 box.insert(3,'Sample3')
-box.place(x=350,y=40)
+box.place(x=350,y=40) 
 
 def show():
     print(box.get(box.curselection()))
